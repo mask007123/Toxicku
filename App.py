@@ -4,7 +4,7 @@ import pickle
 import streamlit as st
 from PIL import Image
 
-with open(r'C:\Users\gj979\PycharmProjects\Toxic-Comment-Classification\toxic_vect.pkl', 'rb') as f:
+with open('toxic_vect.pkl', 'rb') as f:
     toxic = pickle.load(f)
 with open(r'C:\Users\gj979\PycharmProjects\Toxic-Comment-Classification\toxic_model.pkl', 'rb') as f:
     toxic_model = pickle.load(f)
