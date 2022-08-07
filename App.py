@@ -42,7 +42,7 @@ def main():
     zero = toxic_model.predict_proba(vect)[:, 0][0]
     one = toxic_model.predict_proba(vect)[:, 1][0]
     if (zero >= 0.41 and one <= 0.59) and (zero <= 0.59 and one >= 0.41):
-        st.write('neutral')
+        st.write('Neutral for Toxic Category')
     elif one > 0.59:
         st.write('Toxic')
     else:
@@ -53,7 +53,7 @@ def main():
     zero = severe_toxic_model.predict_proba(vect)[:, 0][0]
     one = severe_toxic_model.predict_proba(vect)[:, 1][0]
     if (zero >= 0.41 and one <= 0.59) and (zero <= 0.59 and one >= 0.41):
-        st.write('neutral')
+        st.write('Neutral for Severe Toxic Category')
     elif one > 0.59:
         st.write('Severe_toxic')
     else:
@@ -64,7 +64,7 @@ def main():
     zero = threat_model.predict_proba(vect)[:, 0][0]
     one = threat_model.predict_proba(vect)[:, 1][0]
     if (zero >= 0.41 and one <= 0.59) and (zero <= 0.59 and one >= 0.41):
-        st.write('neutral')
+        st.write('Neutral for Threat Category')
     elif one > 0.59:
         st.write('Threat')
     else:
@@ -75,18 +75,18 @@ def main():
     zero = obscene_model.predict_proba(vect)[:, 0][0]
     one = obscene_model.predict_proba(vect)[:, 1][0]
     if (zero >= 0.41 and one <= 0.59) and (zero <= 0.59 and one >= 0.41):
-        st.write('neutral')
+        st.write('Neutral for Obscene Category')
     elif one > 0.59:
-        st.write('obscene')
+        st.write('Obscene')
     else:
-        st.write('Non obscene')
+        st.write('Non Obscene')
 
     #insult
     vect = insult.transform([Input])
     zero = insult_model.predict_proba(vect)[:, 0][0]
     one = insult_model.predict_proba(vect)[:, 1][0]
     if (zero >= 0.41 and one <= 0.59) and (zero <= 0.59 and one >= 0.41):
-        st.write('neutral')
+        st.write('Neutral for Insult Category')
     elif one > 0.59:
         st.write('Insult')
     else:
@@ -97,7 +97,7 @@ def main():
     zero = identity_hate_model.predict_proba(vect)[:, 0][0]
     one = identity_hate_model.predict_proba(vect)[:, 1][0]
     if (zero >= 0.41 and one <= 0.59) and (zero <= 0.59 and one >= 0.41):
-        st.write('neutral')
+        st.write('Neutral for Identity hate Category')
     elif one > 0.59:
         st.write('Identity hate')
     else:
