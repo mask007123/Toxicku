@@ -6,7 +6,7 @@ from PIL import Image
 
 with open('toxic_vect.pkl', 'rb') as f:
     toxic = pickle.load(f)
-with open(r'C:\Users\gj979\PycharmProjects\Toxic-Comment-Classification\toxic_model.pkl', 'rb') as f:
+with open('toxic_model.pkl', 'rb') as f:
     toxic_model = pickle.load(f)
 with open('severe_toxic_vect.pkl', 'rb') as f:
     severe_toxic = pickle.load(f)
